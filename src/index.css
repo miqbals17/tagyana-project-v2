@@ -1,1 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Parisienne&family=Quicksand:wght@300..700&family=Sedan:ital@0;1&family=The+Nautigal:wght@400;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-lora: "Lora", "serif";
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-sedan: "Sedan", serif;
+  --font-parisienne: "Parisienne", cursive;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-the-nautigal: "The Nautigal", cursive;
+}
