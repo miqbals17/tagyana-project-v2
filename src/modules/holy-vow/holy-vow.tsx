@@ -19,18 +19,20 @@ interface HolyVowProps {
   brideGroomData: IBrideGroomData;
   brideGroomImages: string[];
   galleryImages: { src: string }[];
+  audioElement: HTMLAudioElement;
 }
 
 export default function HolyVow({
   brideGroomData,
   brideGroomImages,
   galleryImages,
+  audioElement,
 }: HolyVowProps): React.ReactNode {
   const [queryParams] = useSearchParams();
 
   const [guest, setGuest] = useState({ name: "", from: "" });
   const [isCoverClicked, setIsCoverClicked] = useState<boolean>(false);
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [audio] = useState<HTMLAudioElement | null>(audioElement);
   const [play, setPlay] = useState<boolean>(false);
 
   const handleClickCover = (): void => {
@@ -45,11 +47,6 @@ export default function HolyVow({
       name: queryParams.get("to") || "NAMA TAMU",
       from: queryParams.get("from") || "",
     });
-
-    const audioElement = new Audio(
-      `${import.meta.env.VITE_CDN_BASE_PATH_VIDEO}/v1739613596/blue_wgtykg.mp3`
-    );
-    setAudio(audioElement);
   }, []);
 
   return (

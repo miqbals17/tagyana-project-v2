@@ -68,11 +68,16 @@ export default function HolyVowPreview(): React.ReactNode {
     { src: `${CDN_BASE_PATH}/v1739097212/gallery-2_xfkc9s.avif` },
   ];
 
+  const audioElement = new Audio(
+    `${import.meta.env.VITE_CDN_BASE_PATH_VIDEO}/v1739613596/blue_wgtykg.mp3`
+  );
+
   return (
     <HolyVow
       brideGroomData={brideGroomData}
       brideGroomImages={brideGroomImages}
       galleryImages={galleryImages}
+      audioElement={audioElement}
     />
   );
 }

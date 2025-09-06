@@ -72,11 +72,18 @@ export default function DiandraIchbal(): React.ReactNode {
     { src: `${CDN_BASE_PATH}/q_auto:low/v1754791125/P1234533SS_uoqvty.jpg` },
   ];
 
+  const audioElement = new Audio(
+    `${
+      import.meta.env.VITE_CDN_BASE_PATH_VIDEO
+    }/v1754733517/muara-adera_etle6h.mp3`
+  );
+
   return (
     <HolyVow
       brideGroomData={brideGroomData}
       brideGroomImages={brideGroomImages}
       galleryImages={galleryImages}
+      audioElement={audioElement}
     />
   );
 }
