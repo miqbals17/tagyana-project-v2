@@ -1,7 +1,7 @@
 import { IconCheck, IconHeartFilled, IconX } from "@tabler/icons-react";
 import { addDoc, collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useSearchParams } from "react-router";
 
 import RelativeTime from "../common/components/relative-time";
 import TextReveal from "../common/components/text-reveal";
@@ -10,7 +10,8 @@ import { db } from "../common/utils/firebase";
 import type { IPrayer } from "../common/types/bride-groom";
 
 export default function HolyVowPrayer(): React.ReactNode {
-  const { to: name } = useParams();
+  const [queryParams] = useSearchParams();
+  const name = queryParams.get("to");
 
   const [datas, setDatas] = useState<IPrayer[]>([]);
   const [pray, setPray] = useState<IPrayer>({

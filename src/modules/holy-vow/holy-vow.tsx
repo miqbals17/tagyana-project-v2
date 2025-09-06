@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useSearchParams } from "react-router";
 
 import MusicPlayer from "../common/components/music-player";
 
@@ -26,7 +26,7 @@ export default function HolyVow({
   brideGroomImages,
   galleryImages,
 }: HolyVowProps): React.ReactNode {
-  const { to: name, from } = useParams();
+  const [queryParams] = useSearchParams();
 
   const [guest, setGuest] = useState({ name: "", from: "" });
   const [isCoverClicked, setIsCoverClicked] = useState<boolean>(false);
@@ -42,8 +42,8 @@ export default function HolyVow({
     document.body.style.overflow = "hidden";
 
     setGuest({
-      name: name || "NAMA TAMU",
-      from: from || "TEMPAT ASAL",
+      name: queryParams.get("to") || "NAMA TAMU",
+      from: queryParams.get("from") || "",
     });
 
     const audioElement = new Audio(
