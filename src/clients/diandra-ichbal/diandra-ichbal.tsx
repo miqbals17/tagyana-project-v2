@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 import { CDN_BASE_PATH } from "../../modules/common/constants/base-path";
 import HolyVow from "../../modules/holy-vow/holy-vow";
@@ -79,11 +80,41 @@ export default function DiandraIchbal(): React.ReactNode {
   );
 
   return (
-    <HolyVow
-      brideGroomData={brideGroomData}
-      brideGroomImages={brideGroomImages}
-      galleryImages={galleryImages}
-      audioElement={audioElement}
-    />
+    <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Menghadirkan cara modern untuk mengundang orang-orang terkasih ke hari spesial anda"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="Diandra & Ichbal | Undangan Pernikahan"
+        />
+        <meta
+          property="og:description"
+          content="Acara Pernikahan diselenggarakan pada hari Sabtu, 04 Oktober 2025"
+        />
+        <meta
+          property="og:url"
+          content="https://tagyana.my.id/diandra-ichbal"
+        />
+        <meta property="og:site_name" content="invitation" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/da2awcnd1/image/upload/q_auto,c_fill,w_1200,h_630/v1754791122/cv-rear_q7qcfu.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200px" />
+        <meta property="og:image:height" content="630px" />
+        <title>Diandra & Ichbal | Undangan Digital</title>
+      </Helmet>
+      <HolyVow
+        brideGroomData={brideGroomData}
+        brideGroomImages={brideGroomImages}
+        galleryImages={galleryImages}
+        audioElement={audioElement}
+      />
+    </>
   );
 }
