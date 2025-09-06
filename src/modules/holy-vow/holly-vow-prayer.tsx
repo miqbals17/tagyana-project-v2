@@ -71,7 +71,7 @@ export default function HolyVowPrayer(): React.ReactNode {
 
   return (
     <section id="prayer">
-      <div className="relative bg-[url('https://res.cloudinary.com/da2awcnd1/image/upload/v1739635449/bg_he5vcq.avif')] bg-cover bg-center px-4 pb-6 pt-12">
+      <div className="relative bg-[url('https://res.cloudinary.com/da2awcnd1/image/upload/v1739635449/bg_he5vcq.avif')] bg-cover bg-center px-4 py-6">
         <div className="space-y-4">
           <div className="space-y-2 px-2 text-[#776B5D]">
             <TextReveal className="text-center font-great-vibes text-4xl">
@@ -85,34 +85,21 @@ export default function HolyVowPrayer(): React.ReactNode {
           </div>
           <form
             onSubmit={formSubmit}
-            className="flex w-full flex-col space-y-3 border-y-2 py-6"
+            className="flex w-full flex-col space-y-3 py-2"
           >
             <input
               required
               type="text"
               placeholder="Nama"
-              className="px-3 py-2 text-sm outline-amber-400"
+              className="px-3 py-2 text-sm outline-[#6E6E6E] bg-white"
               onChange={(e) => setPray({ ...pray, name: e.target.value })}
               value={pray.name}
             />
-            {/* <input
-              required
-              type="text"
-              placeholder="Hubungan (Teman, saudara, dll)"
-              className="px-3 py-2 text-sm outline-amber-400"
-              onChange={(e) =>
-                setPray({
-                  ...pray,
-                  relationship: e.target.value,
-                })
-              }
-              value={pray.relationship}
-            /> */}
             <textarea
               required
               name="ucapan"
               id="ucapan"
-              className="px-3 py-2 text-sm outline-amber-400"
+              className="px-3 py-2 text-sm outline-[#6E6E6E] bg-white"
               placeholder="Ucapan"
               onChange={(e) =>
                 setPray({
@@ -130,7 +117,7 @@ export default function HolyVowPrayer(): React.ReactNode {
                   isAttend: value === "hadir",
                 });
               }}
-              className="rounded-md border bg-white p-2 font-quicksand text-sm outline-amber-400"
+              className="rounded-md border-none bg-white p-2 font-quicksand text-sm outline-[#6E6E6E]"
               defaultValue={""}
               required
             >

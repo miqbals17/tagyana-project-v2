@@ -12,9 +12,9 @@ export default function HolyVowEvent({
 
   return (
     <section id="event" className="relative">
-      <div className="relative px-4 py-10">
+      <div className="relative px-4 pt-4 pb-10">
         <div className="relative z-10 space-y-8">
-          <div className="space-y-3 px-2">
+          <div className="space-y-4 px-2">
             <TextReveal className="text-center font-great-vibes text-4xl text-[#776B5D]">
               Momen Spesial Kami
             </TextReveal>

@@ -193,7 +193,7 @@ export default function HolyVowGift({
 
   return (
     <section id="gift">
-      <div className="relative bg-[url('https://res.cloudinary.com/da2awcnd1/image/upload/v1739635449/bg_he5vcq.avif')] bg-cover bg-center px-4 py-10">
+      <div className="relative bg-[url('https://res.cloudinary.com/da2awcnd1/image/upload/v1739635449/bg_he5vcq.avif')] bg-cover bg-center px-4 pt-10 pb-4">
         <div className="space-y-4">
           <div className="space-y-3 text-[#776B5D]">
             <TextReveal className="text-center font-great-vibes text-4xl">
@@ -212,8 +212,6 @@ export default function HolyVowGift({
                   <img
                     src={`${CDN_BASE_PATH}/v1739082272/Bank_Mandiri_logo_2016.svg_uvbqof.avif`}
                     alt="mandiri"
-                    width={0}
-                    height={0}
                     className="h-auto w-28"
                   />
                 </div>
@@ -245,8 +243,6 @@ export default function HolyVowGift({
                   <img
                     src={`${CDN_BASE_PATH}/v1739082272/BRI_2020.svg_axvs2l.avif`}
                     alt="bri"
-                    width={0}
-                    height={0}
                     className="w-28"
                   />
                 </div>
@@ -309,8 +305,6 @@ export default function HolyVowGift({
                   <img
                     src={`${CDN_BASE_PATH}/v1739082272/SeaBank.svg_my738d.avif`}
                     alt="seabank"
-                    width={0}
-                    height={0}
                     className="w-28"
                   />
                 </div>
@@ -342,8 +336,6 @@ export default function HolyVowGift({
                   <img
                     src={`${CDN_BASE_PATH}/v1739082272/Logo_dana_blue.svg_ze8chw.avif`}
                     alt="dana"
-                    width={0}
-                    height={0}
                     className="w-28"
                   />
                 </div>
@@ -375,8 +367,6 @@ export default function HolyVowGift({
                   <img
                     src={`${CDN_BASE_PATH}/v1739082272/ShopeePay_Logo_-_Koleksilogo.com_izci3p.avif`}
                     alt="shopeepay"
-                    width={0}
-                    height={0}
                     className="w-28"
                   />
                 </div>
